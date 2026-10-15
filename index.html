@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendamento da Quadra | Dom Ungarelli</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo"><div class="marca">DU</div><div><p class="etiqueta">CENTRO EDUCA MAIS</p><h1>Quadra Dom Ungarelli</h1><p class="subtitulo">Sistema de agendamento esportivo</p></div></header>
+<main class="container">
+<section class="boas-vindas"><div><span class="tag">ESPAÇO ESPORTIVO</span><h2>Reserve um horário para jogar</h2><p>Preencha os dados e envie sua solicitação. A reserva ficará aguardando a aprovação da gestão.</p></div><div class="icone-quadra">🏀</div></section>
+<section class="grade"><article class="painel"><div class="titulo-secao"><div><span class="numero">01</span><h2>Nova solicitação</h2></div><p>Campos com * são obrigatórios.</p></div>
+<form id="formAgendamento"><div class="campos">
+<label>Nome completo *<input name="nome" required maxlength="80" placeholder="Nome do responsável"></label>
+<label>Turma / sala *<input name="turma" required maxlength="30" placeholder="Ex.: 2º ano B"></label>
+<label>Matrícula ou número de chamada<input name="identificacao" maxlength="30" placeholder="Opcional"></label>
+<label>Esporte *<select name="esporte" required><option value="">Selecione</option><option>Futsal</option><option>Basquete</option><option>Vôlei</option></select></label>
+<label>Data desejada *<input type="date" name="data" id="data" required></label>
+<label>Horário disponível *<select name="horario" id="horario" required><option value="">Escolha a data primeiro</option></select></label>
+<label>Quantidade de participantes *<input type="number" name="participantes" min="1" max="20" required placeholder="Máximo: 20"></label>
+<label>Telefone para contato<input name="telefone" type="tel" maxlength="20" placeholder="(99) 99999-9999"></label></div>
+<label>Observações<textarea name="observacoes" rows="3" maxlength="300" placeholder="Informações adicionais (opcional)"></textarea></label>
+<div class="aviso"><strong>Horários:</strong> quarta-feira, das 17h às 20h, e sábado, das 8h às 12h. Nos demais dias, a quadra fica fechada.</div>
+<button class="botao principal" type="submit">Enviar solicitação <span>→</span></button><p id="mensagem" class="mensagem" role="status"></p></form></article>
+<aside class="painel lateral"><span class="tag">INFORMAÇÕES</span><h2>Antes de reservar</h2><ul class="regras"><li><span>✓</span><div><strong>Escolha o dia correto</strong><p>Somente quarta-feira e sábado estão disponíveis.</p></div></li><li><span>✓</span><div><strong>Até 20 participantes</strong><p>Informe o total de pessoas que vão utilizar a quadra.</p></div></li><li><span>✓</span><div><strong>Aguarde a aprovação</strong><p>Enviar a solicitação não confirma a reserva.</p></div></li></ul><div class="horarios"><h3>Funcionamento</h3><div><span>Quarta-feira</span><strong>17h–20h</strong></div><div><span>Sábado</span><strong>8h–12h</strong></div><div><span>Outros dias</span><strong class="fechado">Fechado</strong></div></div></aside></section>
+<section class="painel lista-painel"><div class="titulo-secao lista-titulo"><div><span class="numero">02</span><h2>Solicitações registradas</h2></div><button id="limpar" class="botao secundario" type="button">Limpar lista</button></div><p class="nota">Demonstração local: os dados ficam salvos neste navegador. Para uso oficial com vários dispositivos, é necessário conectar um banco de dados.</p><div id="listaAgendamentos" class="lista"></div></section>
+</main><footer>Centro Educa Mais Dom Ungarelli · Agendamento da quadra</footer><script src="script.js"></script></body></html>
